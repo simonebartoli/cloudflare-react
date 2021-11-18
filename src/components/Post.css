@@ -1,0 +1,36 @@
+.post-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1em;
+    margin: 3em 0;
+    color: whitesmoke;
+    position: relative;
+}
+
+.date{
+    font-size: 2em;
+    text-align: center;
+    width: 20%;
+}
+.post{
+    padding: 2em;
+    border: 1pt solid whitesmoke;
+    width: 40%;
+}
+
+
+.title{
+    font-size: 1.75em;
+}
+.content{
+    word-break: break-all;
+}
+.username{
+    font-size: 1.25em;
+}
+
+.separator{
+    width: 10%;
+}
+

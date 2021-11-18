@@ -1,0 +1,24 @@
+.list-posts{
+    position: relative;
+    padding: 0 1em;
+    margin: 2em 0;
+}
+.vertical-line{
+    width: 10%;
+    margin: 0 1em;
+    min-height: 60vh;
+    height: 100%;
+    border-left: 3pt solid white;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 20%;
+}
+.no-post{
+    font-size: 2.5em;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}

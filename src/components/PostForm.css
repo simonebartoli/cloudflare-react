@@ -1,0 +1,34 @@
+.form-section{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+}
+.form-action{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5em;
+}
+.form-section input, .form-section textarea{
+    width: 100%;
+    padding: 0.75em;
+    font-size: 1.5em;
+}
+.form-section label{
+    margin-bottom: 0.5em;
+    font-size: 1.25em;
+}
+
+textarea{
+    resize: none;
+}
+
+.input-container{
+    position: relative;
+}
+.char-counter{
+    position: absolute;
+    right: 2.5%;
+    transform: translateY(50%);
+}
