@@ -16,13 +16,20 @@
 .post{
     padding: 2em;
     border: 1pt solid whitesmoke;
-    width: 40%;
+    width: 50%;
 }
-
 
 .title{
+    width: 80%;
     font-size: 1.75em;
 }
+
+.title-score{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .content{
     word-break: break-all;
 }

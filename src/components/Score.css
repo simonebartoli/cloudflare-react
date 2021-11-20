@@ -1,0 +1,17 @@
+.score{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.vote{
+    font-size: 2em;
+    cursor: pointer;
+}
+.up-counter:hover, .down-counter:hover{
+    color: orangered;
+}
+.selected{
+    color: orangered;
+}

@@ -56,3 +56,19 @@ button{
     font-size: 1.25em;
     background-color: #d21b1b;
 }
+
+.filter-option{
+    align-items: center;
+    gap: 0.5em;
+    color: whitesmoke;
+    border: 1pt solid black;
+    box-shadow: 0 0 5px 1px black;
+    padding: 0.5em;
+    font-size: 1em;
+    background-color: grey;
+}
+
+.filter-option.selected{
+    color: white;
+    background-color: orangered;
+}

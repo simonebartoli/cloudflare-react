@@ -1,15 +1,14 @@
-import React, {useLayoutEffect} from "react";
+import React from "react";
 import Post from "./Post";
 import "./ListPosts.css"
 
-function ListPosts({posts}) {
-    posts.sort((a, b) => (a.datetime < b.datetime) ? 1 : -1)
+function ListPosts({posts, editPostScore, user, setUser}) {
     return (
         <div className={"list-posts"}>
             {posts.length > 0 && <div className={"vertical-line"}/>}
             {posts.length > 0 ?
                 posts.map(post => (
-                    <Post key={post.id} post={post}/>
+                    <Post key={post.id} post={post} editPostScore={editPostScore} user={user} setUser={setUser}/>
                 )) :
                 <div className={"no-post"}>
                     <p>

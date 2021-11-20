@@ -1,5 +1,7 @@
 import React from "react";
 import "./Post.css"
+
+import Score from "./Score";
 import {AiFillCaretLeft} from "react-icons/ai"
 import moment from "moment";
 
@@ -11,7 +13,7 @@ const AiFillCaretLeftStyle = {
     transform: "translate(-50%, -50%)",
 }
 
-function Post({post}) {
+function Post({post, editPostScore, user, setUser}) {
     const maxMessageLength = 150;
     const t = new Date(post.datetime)
     const date = moment(t).format("YYYY-MM-D")
@@ -23,7 +25,13 @@ function Post({post}) {
             <div className={"separator"}/>
             <AiFillCaretLeft style={AiFillCaretLeftStyle}/>
             <section className={"post"}>
-                <h3 className={"title"}>{post.title}</h3>
+                <div className={"title-score"}>
+                    <h3 className={"title"}>{post.title}</h3>
+                    <Score id={post.id}
+                           upvote={post.upvote} downvote={post.downvote}
+                           editPostScore={editPostScore}
+                           user={user} setUser={setUser}/>
+                </div>
                 <h4 className={"username"}>{post.username}</h4>
                 <p className={"content"}>
                     {post.content.length>maxMessageLength ?

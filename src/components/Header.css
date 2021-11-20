@@ -9,3 +9,10 @@ header h1{
     text-align: center;
     color: whitesmoke;
 }
+.filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
