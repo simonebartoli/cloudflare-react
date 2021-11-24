@@ -1,0 +1,46 @@
+#login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1em;
+    height: 100vh;
+    color: white;
+}
+#login h1{
+    font-size: 3.5em;
+}
+#login p{
+    font-size: 1.5em;
+}
+
+#login .username-box{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 40%;
+}
+
+#login input{
+    background-image: linear-gradient(to right top, #3b444b, #394247, #384044, #373d40, #363b3d, #34393b, #323738, #303536, #2d3233, #293031, #262d2e, #232b2b);
+    background-repeat: no-repeat;
+    margin: 1em;
+    padding: 1em;
+    color: white;
+    font-size: 1.75em;
+    border: 2pt solid orangered;
+    text-align: center;
+    width: 100%;
+}
+
+
+#login .user-counter{
+    position: absolute;
+    top: 52%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+}
+#login .error{
+    color: orangered;
+    font-size: 1.25em;
+}

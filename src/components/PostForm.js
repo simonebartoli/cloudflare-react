@@ -50,6 +50,7 @@ function PostForm({toggleModal, addPost}) {
                            id={"postForm-title"}
                            placeholder={"Insert your Post Title"}
                            value={title}
+                           minLength={minTitleLength}
                            maxLength={maxTitleLength}
                            onChange={(e) => setTitle(e.target.value)}
                     />
@@ -65,6 +66,7 @@ function PostForm({toggleModal, addPost}) {
                               cols="30" rows="8"
                               placeholder={"Insert your message"}
                               value={content}
+                              minLength={minContentLength}
                               maxLength={maxContentLength}
                               onChange={(e) => setContent(e.target.value)}
                     />

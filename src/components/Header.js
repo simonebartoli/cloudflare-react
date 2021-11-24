@@ -4,16 +4,11 @@ import "./Header.css"
 import Button from "./Button";
 
 function Header({username, modal, filterSelect}) {
-    const [iconDate, setIconDate] = useState("arrow-down")
+    const [selected, setSelected] = useState([true, false, false])
+    const [dateSelected, setDateSelected] = useState("date-desc")
 
     const filterHandler = (e) => {
-        if(e.target.className.includes("date-desc")){
-            setIconDate("arrow-up")
-        }else if(e.target.className.includes("date-asc")){
-            setIconDate("arrow-down")
-        }
-        console.log(iconDate)
-        filterSelect(e)
+        filterSelect(e, setSelected, setDateSelected)
     }
 
     return (
@@ -21,13 +16,14 @@ function Header({username, modal, filterSelect}) {
             <h1>Welcome {username}</h1>
             <div className={"filter"}>
                 <span style={{color: "white"}}>Ordered By: </span>
-                <Button text={"Date"} className={"filter-option selected date-desc"} icon={iconDate}
+                <Button text={"Date"} className={`filter-option ${dateSelected} ${selected[0] === true ? 'selected' : ''}`}
+                        icon={dateSelected === 'date-asc' ? 'arrow-up' : 'arrow-down'}
                         type={"button"} onclick={filterHandler}/>
 
-                <Button text={"Upvote"} className={"filter-option upvote"}
+                <Button text={"Upvote"} className={`filter-option upvote ${selected[1] === true ? 'selected' : ''}`}
                         type={"button"} onclick={filterHandler}/>
 
-                <Button text={"Downvote"} className={"filter-option downvote"}
+                <Button text={"Downvote"} className={`filter-option downvote ${selected[2] === true ? 'selected' : ''}`}
                         type={"button"} onclick={filterHandler}/>
             </div>
             <Button text={"Post"} className={"post-button"} onclick={modal} icon={"post"}/>

@@ -11,6 +11,7 @@ export default class Data{
         try {
             const response = await fetch(link, {
                 method: 'POST',
+                credentials: 'include',
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -26,6 +27,7 @@ export default class Data{
         try {
             const response = await fetch('https://cloudflare-backend.bartolisimone.workers.dev/posts', {
                 method: 'POST',
+                credentials: 'include',
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -41,6 +43,7 @@ export default class Data{
         try {
             const response = await fetch(`https://cloudflare-backend.bartolisimone.workers.dev/posts/${post.post.id}`, {
                 method: 'POST',
+                credentials: 'include',
                 headers: {
                     'Content-Type': 'application/json',
                 },

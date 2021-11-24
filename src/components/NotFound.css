@@ -1,0 +1,16 @@
+.not-found{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1em;
+    height: 100vh;
+}
+.not-found h1{
+    font-size: 3em;
+    color: white;
+}
+.not-found .go-back{
+    font-size: 1.5em;
+    color: orangered;
+}
