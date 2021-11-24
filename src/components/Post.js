@@ -34,10 +34,7 @@ function Post({post, editPostScore, user, setUser}) {
                 </div>
                 <h4 className={"username"}>{post.username}</h4>
                 <p className={"content"}>
-                    {post.content.length>maxMessageLength ?
-                        post.content.substr(0, maxMessageLength) + "..." :
-                        post.content
-                    }
+                    {post.content}
                 </p>
             </section>
         </article>
